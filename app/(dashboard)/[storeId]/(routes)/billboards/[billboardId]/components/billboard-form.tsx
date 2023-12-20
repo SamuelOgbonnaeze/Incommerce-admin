@@ -19,8 +19,6 @@ import ImageUpload from "@/components/ui/image-upload"
 
 
 
-
-
 const formSchema = z.object({
     label: z.string().min(1),
     imageUrl: z.string().min(1),
@@ -123,7 +121,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => 
                                         value={field.value ? [field.value] : []}
                                         disabled={loading}
                                         onChange={(url) => field.onChange(url)}
-                                        onRemove={() => field.onChange('')}
+                                        onRemove={() => field.onChange("")}
                                     />
                                 </FormControl>
                                 <FormMessage />
